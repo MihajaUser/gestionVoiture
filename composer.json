@@ -1,0 +1,28 @@
+{
+	"description": "The CodeIgniter framework",
+	"name": "codeigniter/framework",
+	"type": "project",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT",
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+		"irc": "irc://irc.freenode.net/codeigniter",
+		"source": "https://github.com/bcit-ci/CodeIgniter"
+	},
+	"authors": [
+			{
+					"name": "MihajaUser",
+					"email": "randrianarisoalalatianaantonio@gmail.com"
+			}
+	],
+	"minimum-stability": "stable",
+	"require": {
+			"ehime/hello-world": "^1.0",
+			"lcobucci/jwt": "^4.1",
+			"kreait/firebase-php": "^6.2",
+		"phpoffice/phpspreadsheet": "^1.22",
+		"mpdf/mpdf": "*",
+		"tecnickcom/tcpdf": "^6.4"
+	}
+}

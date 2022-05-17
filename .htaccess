@@ -1,0 +1,79 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^home-rechauffement-climatique$ Welcome/index
+RewriteRule ^deconnexion-rechauffement-climatique$ Welcome/index
+RewriteRule ^actualite-rechauffement-climatique$ Welcome/index
+RewriteRule ^pageLogin-rechauffement-climatique ControllerUsers/pageLogin [L]
+RewriteRule ^login-rechauffement-climatique$  ControllerUsers/accueille [L]
+RewriteRule ^details-rechauffement-climatique/(.*)/(.*)/(.*)/(.*) ControllerUsers/details/$1/$2/$3/$4 [L]
+
+RewriteRule ^listeInformation-rechauffement-climatique$  ControllerInfo/liste [L]
+RewriteRule ^pageAjout-rechauffement-climatique$  ControllerInfo/pageAjout [L]
+RewriteRule ^ajoutInformation-rechauffement-climatique$  ControllerInfo/ajout [L]
+RewriteRule ^modifierInformation-rechauffement-climatique$ ControllerInfo/modifier [L]
+RewriteRule ^supprimerInformation-rechauffement-climatique$ ControllerInfo/supprimer [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+
+    # Perhaps better to whitelist expires rules? Perhaps.
+    ExpiresDefault "access plus 15 days"
+
+
+    # Your document php
+    ExpiresByType text/php "access plus 30 days"
+
+    # Data
+    ExpiresByType text/xml "access plus 30 days"
+    ExpiresByType application/xml "access plus 30 days"
+    ExpiresByType application/json "access plus 30 days"
+
+    # Feed
+    ExpiresByType application/rss+xml "access plus 30 days"
+    ExpiresByType application/atom+xml "access plus 30 days"
+
+    # Favicon (cannot be renamed)
+    ExpiresByType image/x-icon "access plus 30 days"
+
+    # Media: images, video, audio
+    ExpiresByType image/gif "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/jpg "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+
+
+
+    # Webfonts
+    ExpiresByType font/truetype "access plus 30 days"
+    ExpiresByType font/opentype "access plus 30 days"
+    ExpiresByType application/x-font-woff "access plus 30 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+    ExpiresByType application/vnd.ms-fontobject "access plus 30 days"
+
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 30 days"
+    ExpiresByType application/javascript "access plus 30 days"
+
+    <IfModule mod_headers.c>
+    Header append Cache-Control "public"
+    </IfModule>
+</IfModule>
+
+
+<IfModule mod_deflate.c>
+
+# Force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)s*,?s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+
+   
+</IfModule>
