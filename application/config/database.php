@@ -79,7 +79,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'rechauffement',
+	'database' => 'gestionVoiture',
 	*/
 	'dsn'	=> '',
 	'hostname' => '81.19.215.12',
