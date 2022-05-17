@@ -11,9 +11,17 @@ class ControllerUsers extends CI_Controller
     public function pageLogin()
     {
         $data['page'] = 'login.php';
-        $this->load->view('frontoffice/index', $data);
+        $this->load->view('frontoffice/template', $data);
     }
-  
+    public function pageSignUp()
+    {
+        $data['page'] = 'signUp.php';
+        $this->load->view('frontoffice/template', $data);
+    }
+
+    public function signUp(){
+        $this->pageLogin();
+    }
     public function accueille()
     { 
         $user =  $this->UsersMod->checkUsers($this->input->post('email'), sha1($this->input->post('mdp')));

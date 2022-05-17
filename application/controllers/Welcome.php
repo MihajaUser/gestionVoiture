@@ -21,7 +21,8 @@ class Welcome extends CI_Controller
 	 */
 	public function index()
 	{
-    $this->load->view('frontoffice/index');
+		$data['page']='login.php';
+    $this->load->view('frontoffice/template',$data);
 	}
 
 }

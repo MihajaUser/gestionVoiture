@@ -4,7 +4,8 @@ RewriteEngine on
 
 RewriteRule ^pageLogin-gestion-de-voiture$  Welcome/index [L]
 RewriteRule ^login-gestion-de-voiture$  ControllerUsers/accueille [L]
- 
+RewriteRule ^pageSignUp-gestion-de-voiture$  ControllerUsers/pageSignUp [L]
+RewriteRule ^signUp-gestion-de-voiture$  ControllerUsers/signUp [L]
 
 RewriteRule ^details-rechauffement-climatique/(.*)/(.*)/(.*)/(.*) ControllerUsers/details/$1/$2/$3/$4 [L]
 

@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
- $config['base_url'] = 'http://localhost/gestionVoiture/';
-//$config['base_url'] = 'https://rechauffement1309.herokuapp.com';
+ //$config['base_url'] = 'http://localhost/gestionVoiture/';
+$config['base_url'] = 'https://gestionvoituremadagascar.herokuapp.com';
 /*
 |--------------------------------------------------------------------------
 | Index File
