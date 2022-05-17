@@ -1,18 +1,14 @@
 Options +FollowSymlinks
 RewriteEngine on
 
-RewriteRule ^home-rechauffement-climatique$ Welcome/index
-RewriteRule ^deconnexion-rechauffement-climatique$ Welcome/index
-RewriteRule ^actualite-rechauffement-climatique$ Welcome/index
-RewriteRule ^pageLogin-rechauffement-climatique ControllerUsers/pageLogin [L]
-RewriteRule ^login-rechauffement-climatique$  ControllerUsers/accueille [L]
+
+RewriteRule ^pageLogin-gestion-de-voiture$  Welcome/index [L]
+RewriteRule ^login-gestion-de-voiture$  ControllerUsers/accueille [L]
+ 
+
 RewriteRule ^details-rechauffement-climatique/(.*)/(.*)/(.*)/(.*) ControllerUsers/details/$1/$2/$3/$4 [L]
 
-RewriteRule ^listeInformation-rechauffement-climatique$  ControllerInfo/liste [L]
-RewriteRule ^pageAjout-rechauffement-climatique$  ControllerInfo/pageAjout [L]
-RewriteRule ^ajoutInformation-rechauffement-climatique$  ControllerInfo/ajout [L]
-RewriteRule ^modifierInformation-rechauffement-climatique$ ControllerInfo/modifier [L]
-RewriteRule ^supprimerInformation-rechauffement-climatique$ ControllerInfo/supprimer [L]
+ 
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

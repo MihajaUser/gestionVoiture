@@ -14,7 +14,7 @@ class UsersMod extends CI_Model
         $query = $this->db->query($request);
         return $query->result_array();
     }
-
+    
     public  function insert($data)
     {
         $this->db->insert("admin", $data);

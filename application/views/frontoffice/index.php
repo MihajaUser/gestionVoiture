@@ -1,257 +1,132 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <title>home</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
-  <!-- Style Sheets -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/animate.css">
-  <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/templatemo_misc.css">
-  <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/templatemo_style.css">
-  <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/styles.css">
-  <!-- JavaScripts -->
-  <script src="<?php echo base_url() ?>/assets/js/jquery-1.11.1.min.js"></script>
-  <script src="<?php echo base_url() ?>/assets/js/bootstrap-dropdown.js"></script>
-  <script src="<?php echo base_url() ?>/assets/js/bootstrap-collapse.js"></script>
-  <script src="<?php echo base_url() ?>/assets/js/bootstrap-tab.js"></script>
-  <script src="<?php echo base_url() ?>/assets/js/jquery.singlePageNav.js"></script>
-  <script src="<?php echo base_url() ?>/assets/js/jquery.flexslider.js"></script>
-  <script src="<?php echo base_url() ?>/assets/js/custom.js"></script>
-  <script src="<?php echo base_url() ?>/assets/js/jquery.lightbox.js"></script>
-  <script src="<?php echo base_url() ?>/assets/js/templatemo_custom.js"></script>
-  <script src="<?php echo base_url() ?>/assets/js/responsiveCarousel.min.js"></script>
+	<title>Login V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/assets1/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets1/fonts/iconic/css/material-design-iconic-font.min.css">
+	<!--===============================================================================================-->
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets1/css/util.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets1/css/main.css">
+	<!--===============================================================================================-->
+
 </head>
 
 <body>
-  <!-- header start -->
 
-  <div id="templatemo_home_page">
-    <div class="templatemo_topbar">
-      <div class="container">
-        <div class="row">
-          <div class="templatemo_titlewrapper"><img src="<?php echo base_url() ?>/assets/images/templatemo_logobg.png" alt="logo background">
-            <div class="templatemo_title"><span>Réchauffement Climatique</span></div>
-          </div>
-          <div class="clear"></div>
-          <div class="templatemo_titlewrappersmall">Conquer</div>
-          <nav class="navbar navbar-default templatemo_menu" role="navigation">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-              </div>
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div id="top-menu">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li><a class="menu" href="<?php echo site_url()?>/home-rechauffement-climatique">Home</a></li>
-                    <li><a class="menu" href="<?php echo site_url()?>/actualite-rechauffement-climatique">actualité</a></li>
-                    <li><a class="menu" href="#templatemo_contact_page">Contacts</a></li>
-                    <li><a class="menu" href="<?php echo site_url()?>/pageLogin-rechauffement-climatique">Se connecter</a></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-          </nav>
-          <div class="clear"></div>
-        </div>
-      </div>
-    </div>
-    <div class="templatemo_headerimage">
-      <div class="flexslider">
-        <ul class="slides">
-          <li><img src="<?php echo base_url() ?>/assets/images/slider/1.jpg" alt="Slide 1"></li>
-          <li><img src="<?php echo base_url() ?>/assets/images/slider/2.jpg" alt="Slide 2"></li>
-          <li><img src="<?php echo base_url() ?>/assets/images/slider/3.jpg" alt="Slide 3"></li>
-        </ul>
-      </div>
-    </div>
-    <div class="slider-caption">
-      <div class="templatemo_homewrapper">
-        <div class="templatemo_hometitle">Réchauffement de la Terre</div>
-        <div class="templatemo_hometext">Nous devons nous unir sur pour contrer le réchauffement climatique pour un avenir meilleur pur nos enfants dans le futur.</div>
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('<?php echo base_url() ?>assets1/images/bg-01.jpg');">
+			<div class="wrap-login100">
+				<?php
 
-      </div>
-    </div>
-  </div>
-  <!-- header end -->
-  <div class="clear"></div>
-  <!-- service start -->
-  <div >
-    <div class="container">
-      <div class="row">
-      <?= include($page);?>
-      </div>
-    </div>
-  </div>
-  <!-- service end -->
-  
-  <!-- contact start -->
-  <div class="templatemo_contactwrapper" id="templatemo_contact_page">
-    <div class="container">
-      <div class="row" style="background-color:coral">
-        <h1>Contact</h1>
-      </div>
-    </div>
+				if (!$this->session->csrf_token) {
+					$this->session->csrf_token = hash('sha1', time());
+				}
 
-    <div class="container templatemo_contactmargin">
-      <div class="row">
-      <div class="col-md-3">
+				?>
+				<form class="login100-form validate-form" role="form" action="<?php echo site_url("/login-gestion-de-voiture") ?>" method="POST">
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
 
-        </div>
-        <div class="col-md-5 offset-1">
-          <div class="clear"></div>
-          <div class="templatemo_address_left">Téléphone:</div>
-          <div class="templatemo_address_right">+261 345802425<br>
-          </div>
-          <div class="clear"></div>
-          <div class="clear"></div>
-          <div class="templatemo_address_left">Email :</div>
-          <div class="templatemo_address_right">admin@company.com<br>
-            info@company.com</div>
-        </div>
-      </div>
-    </div>
-  </div>
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
 
-  <!-- contact end -->
-  <!-- footer start -->
-  <div class="templatemo_footerwrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">Copyright &copy; 2084 <a href="#">Company Name</a>
-          <!-- | Design: <a href="http://www.templatemo.com">templatemo</a> -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- footer end -->
-  <script>
-    <!-- scroll to specific id when click on menu 
-    -->
-    //
-    Cache
-    selectors
-    var
-    lastId,
-    topMenu
-    =
-    $("#top-menu"),
-    topMenuHeight
-    =
-    topMenu.outerHeight()
-    +
-    15,
-    //
-    All
-    list
-    items
-    menuItems
-    =
-    topMenu.find("a"),
-    //
-    Anchors
-    corresponding
-    to
-    menu
-    items
-    scrollItems
-    =
-    menuItems.map(function()
-    {
-    var
-    item
-    =
-    $($(this).attr("href"));
-    if
-    (item.length)
-    {
-    return
-    item;
-    }
-    });
-    //
-    Bind
-    click
-    handler
-    to
-    menu
-    items
-    //
-    so
-    we
-    can
-    get
-    a
-    fancy
-    scroll
-    animation
-    menuItems.click(function(e)
-    {
-    var
-    href
-    =
-    $(this).attr("href"),
-    offsetTop
-    =
-    href
-    ===
-    "#"
-    ?
-    0
-    :
-    $(href).offset().top
-    -
-    topMenuHeight
-    +
-    1;
-    $('html,
-    body
-    ').stop().animate({
-    scrollTop:
-    offsetTop
-    },
-    300);
-    e.preventDefault();
-    });
-    //
-    Bind
-    to
-    scroll
-    $(window).scroll(function()
-    {
-    //
-    Get
-    container
-    scroll
-    position
-    var
-    fromTop
-    =
-    $(this).scrollTop()
-    +
-    topMenuHeight;
-    //
-    Get
-    id
-    of
-    current
-    scroll
-    item
-    var
-    cur
-    =
-    scrollItems.map(function()
-    {
-    if
-    ($(this).offset().top
-  < fromTop) return this; }); // Get the id of the current element cur=cur[cur.length - 1]; var id=cur && cur.length ? cur[0].id : "" ; if (lastId !==id) { lastId=id; // Set/remove active class menuItems .parent().removeClass("active") .end().filter("[href=#" + id + "]" ).parent().addClass("active"); } }); </script>
+					<div class="wrap-input100" data-validate="Enter username">
+						<input class="input100" type="email" value="randrianarisoalalatianaantonio@gmail.com" name="email" placeholder="Email">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password"  value="mdp" name="mdp" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					<div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+						</label>
+					</div>
+
+					<input type="hidden" name="token" value="<?php echo $this->session->csrf_token ?>">
+					<input type="hidden" name="<?php echo $this->security->get_csrf_token_name() ?>" value="<?php echo $this->security->get_csrf_hash() ?>">
+					<div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn">
+							Login
+						</button>
+
+					</div>
+					<?php if (isset($errorLogin)) {
+					?>
+						<div style="text-align: center;color:red; background-color:white;margin-top:10%;border-radius:10px;">
+						<h2>	mot de passe incorrect</h2>
+						</div>
+					<?php	}
+					?>
+
+					<div class="text-center p-t-90">
+						<a class="txt1" href="#">
+							Forgot Password?
+						</a>
+					</div>
+					<div class="text-center p-t-90">
+						<a class="txt1" href="<?php echo site_url() ?>/ControllerUsers/pageSignUp">
+							Sign up
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<p>This example calls a function to convert from Fahrenheit to Celsius:</p>
+	<p id="demo"></p>
+
+	<script>
+		var popUp = <?php echo json_encode($popUp); ?>;
+
+		function toShow() {
+			$('#myModal').modal('show');
+		}
+		if (popUp == 1) {
+			document.getElementById("demo").innerHTML = popUp;
+			toShow();
+		}
+	</script>
+
+	<div class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Modal body text goes here.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dropDownSelect1"></div>
+	<!--===============================================================================================-->
+	<script src="<?php echo base_url() ?>assets1/js/main.js"></script>
+
 </body>
 
 </html>

@@ -153,9 +153,7 @@
 	<div class="main-container">
 		<div class="pd-ltr-20">
 			<div class="card-box mb-30">
-				<?=
-				include($page); ?>
-			</div>
+				
 
 			<div class="footer-wrap pd-20 mb-20 card-box">
 				<h2>Protegeons la Terre</h2>

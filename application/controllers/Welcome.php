@@ -21,12 +21,7 @@ class Welcome extends CI_Controller
 	 */
 	public function index()
 	{
-		$this->load->model('InfoMod');
-		$data['informations']=	$this->InfoMod->getInformation();
-		$data['page']='actualite.php';
-    $this->load->view('frontoffice/index', $data);
+    $this->load->view('frontoffice/index');
 	}
-	public function test(){
-		$this->load->view('frontoffice/test');
-	}
+
 }
