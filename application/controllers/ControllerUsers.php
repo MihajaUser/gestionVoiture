@@ -19,17 +19,22 @@ class ControllerUsers extends CI_Controller
         $this->load->view('frontoffice/template', $data);
     }
 
-    public function signUp(){
+    public function signUp()
+    {
         $this->pageLogin();
     }
-    public function accueille()
-    { 
+    public function vehicule()
+    {
+      
         $user =  $this->UsersMod->checkUsers($this->input->post('email'), sha1($this->input->post('mdp')));
         if (count($user) == 0) {
             $data['errorLogin'] = 1;
-            $this->load->view('frontoffice/index', $data);
+            $data['page'] = 'login.php';    
+            $this->load->view('frontoffice/template', $data);
         } else {
-            $data['page'] = 'acceuille.php';
+            $this->load->model('VehiculeMod');
+            $data['vehicules'] = $this->VehiculeMod->getVehicule();
+            $data['page'] = 'vehicule.php';
             $this->session->set_userdata('user', $user);
             $this->load->view('backoffice/template', $data);
         }

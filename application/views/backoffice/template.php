@@ -4,7 +4,7 @@
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>Admin climat</title>
+	<title>Admin Transport</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url() ?>/assets/vendors/images/apple-touch-icon.png">
@@ -38,17 +38,20 @@
 </head>
 
 <body>
+	<?php
+	$user = $_SESSION['user'];
+	?>
 	<div class="header">
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
 			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
 			<div class="header-search">
-				<form action="<?php echo site_url()?>/listeInformation-rechauffement-climatique" method="post" >
+				<form action="<?php echo site_url() ?>/listeInformation-rechauffement-climatique" method="post">
 					<div class="form-group mb-0">
 						<i class="dw dw-search2 search-icon"></i>
 						<input type="text" class="form-control search-input" placeholder="Search Here">
 						<div class="dropdown">
-							<a class="dropdown-toggle no-arrow" href="<?php echo site_url()?>/listeInformation-rechauffement-climatique" role="button" data-toggle="dropdown">
+							<a class="dropdown-toggle no-arrow" href="<?php echo site_url() ?>/listeInformation-rechauffement-climatique" role="button" data-toggle="dropdown">
 								<i class="ion-arrow-down-c"></i>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -95,7 +98,7 @@
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<div class="notification-list mx-h-350 customscroll">
-					
+
 						</div>
 					</div>
 				</div>
@@ -118,7 +121,11 @@
 	<div class="left-side-bar">
 		<div class="brand-logo">
 			<a href="<?php echo base_url() ?>/assets/index.html">
-			<h1 style="color: white">ADMIN</h1>
+				<h1 style="color: white">
+					<?php
+					echo ($user[0]['statut']);
+					?>
+				</h1>
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
@@ -132,16 +139,27 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Users</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="<?php echo base_url()?>/deconnexion-rechauffement-climatique">Deconnexion</a></li>
+							<li><a href="<?php echo base_url() ?>/deconnexion-rechauffement-climatique">Deconnexion</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle">
-							<span class="micon dw dw-edit2"></span><span class="mtext">Information</span>
+							<span class="micon dw dw-edit2"></span><span class="mtext">Vehicule</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="<?php echo site_url() ?>/pageAjout-rechauffement-climatique">ajout</a></li>
-							<li><a href="<?php echo site_url() ?>/listeInformation-rechauffement-climatique">liste</a></li>
+							<?php if ($user[0]['statut'] == "admin") { ?>
+								<li><a href="<?php echo site_url() ?>/page-ajout-voiture-gestion-de-voiture">ajout</a></li>
+							<?php		} ?>
+							<li><a href="<?php echo site_url() ?>/liste-voiture-gestion-de-voiture">liste</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">
+							<span class="micon dw dw-edit2"></span><span class="mtext">Trajets</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="<?php echo site_url() ?>/page-ajout-trajet-gestion-de-voiture">ajout</a></li>
+							<li><a href="<?php echo site_url() ?>/liste-trajet-gestion-de-voiture">liste</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -153,24 +171,23 @@
 	<div class="main-container">
 		<div class="pd-ltr-20">
 			<div class="card-box mb-30">
-				
-
-			<div class="footer-wrap pd-20 mb-20 card-box">
-				<h2>Protegeons la Terre</h2>
+				<?= include($page); ?>
+				<div class="footer-wrap pd-20 mb-20 card-box">
+					<h2>Transport Madagascar</h2>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- js -->
-	<script src="<?php echo base_url() ?>/assets/vendors/scripts/core.js"></script>
-	<script src="<?php echo base_url() ?>/assets/vendors/scripts/script.min.js"></script>
-	<script src="<?php echo base_url() ?>/assets/vendors/scripts/process.js"></script>
-	<script src="<?php echo base_url() ?>/assets/vendors/scripts/layout-settings.js"></script>
-	<script src="<?php echo base_url() ?>/assets/plugins/apexcharts/apexcharts.min.js"></script>
-	<script src="<?php echo base_url() ?>/assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="<?php echo base_url() ?>/assets/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-	<script src="<?php echo base_url() ?>/assets/plugins/datatables/js/dataTables.responsive.min.js"></script>
-	<script src="<?php echo base_url() ?>/assets/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-	<script src="<?php echo base_url() ?>/assets/vendors/scripts/dashboard.js"></script>
+		<!-- js -->
+		<script src="<?php echo base_url() ?>/assets/vendors/scripts/core.js"></script>
+		<script src="<?php echo base_url() ?>/assets/vendors/scripts/script.min.js"></script>
+		<script src="<?php echo base_url() ?>/assets/vendors/scripts/process.js"></script>
+		<script src="<?php echo base_url() ?>/assets/vendors/scripts/layout-settings.js"></script>
+		<script src="<?php echo base_url() ?>/assets/plugins/apexcharts/apexcharts.min.js"></script>
+		<script src="<?php echo base_url() ?>/assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+		<script src="<?php echo base_url() ?>/assets/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+		<script src="<?php echo base_url() ?>/assets/plugins/datatables/js/dataTables.responsive.min.js"></script>
+		<script src="<?php echo base_url() ?>/assets/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+		<script src="<?php echo base_url() ?>/assets/vendors/scripts/dashboard.js"></script>
 </body>
 
 </html>

@@ -9,6 +9,11 @@ class UsersMod extends CI_Model
         return $query->result_array();
     }
 
+    public  function getChauffeurs()
+    {
+        $query = $this->db->query("select * from UtilisateursVoitures where statut='chauffeur'");
+        return $query->result_array();
+    }
     public function checkUsers($email,$mdp){
         $request="select * from UtilisateursVoitures where email = '" .$email."'  and mdp = '".$mdp."'";
         $query = $this->db->query($request);

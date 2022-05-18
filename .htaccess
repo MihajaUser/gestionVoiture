@@ -1,11 +1,35 @@
 Options +FollowSymlinks
 RewriteEngine on
 
-
 RewriteRule ^pageLogin-gestion-de-voiture$  Welcome/index [L]
-RewriteRule ^login-gestion-de-voiture$  ControllerUsers/accueille [L]
+RewriteRule ^login-gestion-de-voiture$  ControllerUsers/vehicule [L]
 RewriteRule ^pageSignUp-gestion-de-voiture$  ControllerUsers/pageSignUp [L]
 RewriteRule ^signUp-gestion-de-voiture$  ControllerUsers/signUp [L]
+
+RewriteRule ^liste-voiture-gestion-de-voiture$ ControllerVehicule/liste [L]
+RewriteRule ^page-ajout-voiture-gestion-de-voiture$ ControllerVehicule/pageAjout [L]
+RewriteRule ^ajout-voiture-gestion-de-voiture$ ControllerVehicule/ajout [L]
+RewriteRule ^supprimer-voiture-gestion-de-voiture$ ControllerVehicule/supprimer [L]
+RewriteRule ^papiers-voiture-gestion-de-voiture$ ControllerVehicule/papiers [L]
+
+RewriteRule ^page-ajout-assurance-voiture-gestion-de-voiture$ ControllersAssurance/pageAjout [L]
+RewriteRule ^ajout-assurance-voiture-gestion-de-voiture$ ControllersAssurance/ajout [L]
+RewriteRule ^page-modifier-assurance-voiture-gestion-de-voiture$ ControllersAssurance/pageModifier [L]
+RewriteRule ^modifier-assurance-voiture-gestion-de-voiture$ ControllersAssurance/modifier [L]
+
+RewriteRule ^page-modifier-visite-voiture-gestion-de-voiture$ ControllerVisite/pageModifier [L]
+RewriteRule ^modifier-visite-voiture-gestion-de-voiture$ ControllerVisite/modifier [L] 
+RewriteRule ^page-ajout-visite-voiture-gestion-de-voiture$ ControllerVisite/pageAjout [L]
+RewriteRule ^ajout-visite-voiture-gestion-de-voiture$ ControllerVisite/ajout [L]
+
+RewriteRule ^liste-trajet-gestion-de-voiture$ ControllerTrajet/liste [L]
+RewriteRule ^page-ajout-trajet-gestion-de-voiture$ ControllerTrajet/pageAjout [L]
+RewriteRule ^ajout-trajet-gestion-de-voiture$ ControllerTrajet/ajout [L]
+RewriteRule ^supprimer-trajet-gestion-de-voiture$ ControllerTrajet/supprimer [L]
+
+
+
+
 
 RewriteRule ^details-rechauffement-climatique/(.*)/(.*)/(.*)/(.*) ControllerUsers/details/$1/$2/$3/$4 [L]
 

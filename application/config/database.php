@@ -74,18 +74,19 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	/*
+	
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'gestionVoiture',
-	*/
+	/*
 	'dsn'	=> '',
 	'hostname' => '81.19.215.12',
 	'username' => 'guest_2',
 	'password' => 'pQsx421$',
 	'database' => 'guest_2',
+	*/
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
