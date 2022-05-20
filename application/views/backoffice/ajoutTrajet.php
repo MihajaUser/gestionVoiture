@@ -1,7 +1,8 @@
 <div>
-  <div style="">
+  <div>
+   <br />
+    <div class="card  offset-sm-3 offset-md-3 offset-lg-4   col-sm-4 col-md-6 col-lg-4 col-xl-4">
     <h2 class="h4 pd-20"> Ajout Trajet</h2>
-    <div class="card">
       <div class="card-body">
         <form action="<?php echo site_url('') ?>ajout-trajet-gestion-de-voiture" method="post" enctype="multipart/form-data">
           <select name="id_voiture" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
@@ -18,12 +19,12 @@
               <?php echo "<option value=" . $chauffeur['id'] . ">" . $chauffeur['nom'] . "</option>" ?>
             <?php } ?>
           </select> <br />
-          <input type="date" name="dat_edepart" placeholder="dat_edepart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
-          <input type="time" name="heure_depart" placeholder="heure_depart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
+          <input type="text" onfocus="(this.type='date')" name="date_depart" placeholder="dat_edepart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
+          <input type="text" onfocus="(this.type='time')" name="heure_depart" placeholder="heure_depart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
           <input type="text" name="lieu_depart" placeholder="lieu_depart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
           <input type="number" name="kilometre_depart" placeholder="kilometre_depart" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
-          <input type="date" name="date_arrivee" placeholder="date_arrivee" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
-          <input type="time" name="heure_arrivee" placeholder="heure_arrivee" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
+          <input type="text" onfocus="(this.type='date')" name="date_arrivee" placeholder="date_arrivee" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
+          <input type="text" onfocus="(this.type='time')" name="heure_arrivee" placeholder="heure_arrivee" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
           <input type="text" name="lieu_arrive" placeholder="lieu_arrive" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
           <input type="number" name="kilometre_arrive" placeholder="kilometre_arrive" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />
           <input type="number" name="prix_carburant" placeholder="prix_carburant" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"> <br />

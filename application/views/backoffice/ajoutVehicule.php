@@ -1,8 +1,8 @@
 <div>
-  <div style="margin-left: 25%;">
+  <div>
     <h2 class="h4 pd-20"> Ajout Vehicule</h2>
-    <div class="card" style="width: 50%;">
-      <div class="card-body" style="margin-left: 20%;">
+    <div class="card  offset-sm-3 offset-md-3 offset-lg-4   col-sm-4 col-md-6 col-lg-4 col-xl-4">
+      <div class="card-body">
       <form action="<?php echo site_url('')?>ajout-voiture-gestion-de-voiture" method="post" enctype="multipart/form-data">
       <input type="text"  name ="numero" placeholder="numero"  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
       <br />

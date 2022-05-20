@@ -1,4 +1,5 @@
-<h2 class="h4 pd-20">Liste Vehicule</h2>
+<div class="  col-sm-10 col-md-10 col-lg-10 col-xl-10">
+<h2 class="h4 pd-20"> Validite Papiers</h2>
 <table class="table">
 	<thead class="thead-dark">
 		<tr>
@@ -9,14 +10,17 @@
 			<?php
 			?>
 			<th></th>
-			<th></th>
 		</tr>
-	</thead>
-	<tbody>
+	</thead >
+	<tbody> 
 		<?php foreach ($vehicules as $vehicule) {
 			if ($vehicule['visiteTechniques_reste_jour'] <= 15 |  $vehicule['assurance_reste_jour'] <= 15) {	?>
-				<tr class="table-danger"> <?php	} else { ?>
-				<tr class="table-warning">
+				<tr class="table-danger"> <?php	}
+				elseif ($vehicule['visiteTechniques_reste_jour'] <= 30 |  $vehicule['assurance_reste_jour'] <= 30){?>
+					<tr class="table-warning">
+				<?php }
+				 else { ?>
+				<tr class="table">
 				<?php }
 				?>
 				<td><?= $vehicule['numero'] ?></td>
@@ -27,13 +31,7 @@
 					<td>
 						<form action="<?php echo site_url('') ?>papiers-voiture-gestion-de-voiture" method="post">
 							<input type="hidden" name="idVehicule" value="<?php echo $vehicule['id'] ?>">
-							<input type="submit" class="btn btn-secondary" value="papiers">
-						</form>
-					</td>
-					<td>
-						<form action="<?php echo site_url('') ?>supprimer-voiture-gestion-de-voiture" method="post">
-							<input type="hidden" name="idVehicule" value="<?php echo $vehicule['id'] ?>">
-							<input type="submit" class="btn btn-danger" value="supprimer">
+							<input type="submit" class="btn btn-secondary" value="Details">
 						</form>
 					</td>
 				<?php		} ?>
@@ -41,3 +39,4 @@
 			<?php }	?>
 	</tbody>
 </table>
+</div>

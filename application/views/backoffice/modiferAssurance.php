@@ -1,8 +1,8 @@
 <div>
-  <div style="margin-left: 25%;">
+  <div>
     <h2 class="h4 pd-20"> Modifier Assurance  <?= $numero?></h2>
-    <div class="card" style="width: 50%;">   
-      <div class="card-body" style="margin-left: 20%;">
+    <div class="card  offset-sm-3 offset-md-3 offset-lg-4   col-sm-4 col-md-6 col-lg-4 col-xl-4">   
+      <div class="card-body">
         <form action="<?php echo site_url('') ?>modifier-assurance-voiture-gestion-de-voiture" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $vehicule[0]['id'] ?>">
           <input type="hidden" name="id_voiture" value="<?= $vehicule[0]['id_voiture'] ?>">

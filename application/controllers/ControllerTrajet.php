@@ -29,9 +29,23 @@ class ControllerTrajet extends CI_Controller
 
   public function ajout()
   {
-    if ($this->input->post('id_voiture')==null || $this->input->post('id_chauffeur')==null) {
-      redirect(site_url('page-ajout-trajet-gestion-de-voiture'));
-    }
+    var_dump($_POST);
+    // if ($this->input->post('id_voiture')=="null"  || $this->input->post('id_chauffeur')=="null" ) {
+    //   redirect(site_url('page-ajout-trajet-gestion-de-voiture'));
+    // }
+    $date_depart  = new DateTime($this->input->post('date_depart') . " " . $this->input->post('heure_depart'));
+    $date_arrivee = new DateTime($this->input->post('date_arrivee') . " " . $this->input->post('heure_arrivee'));
+    $intvl = $date_depart->diff($date_arrivee);
+    $heure = ($intvl->i);
+
+    var_dump("---------------------------------");
+    var_dump($intvl->i);
+    // if ($intvl<0)   var_dump($heure. " minute ")  ; {
+    //   redirect(site_url('page-ajout-trajet-gestion-de-voiture'));
+    // }
+
+
+
     $insert = array(
       'id' => '',
       'id_chauffeur' => $this->input->post('id_voiture'),
@@ -48,8 +62,9 @@ class ControllerTrajet extends CI_Controller
       'quantite_carburant' => $this->input->post('quantite_carburant'),
       'motif' => $this->input->post('motif')
     );
-    $this->TrajetMod->insert($insert);
-     redirect(site_url('liste-trajet-gestion-de-voiture'));
+
+    // $this->TrajetMod->insert($insert);
+    //  redirect(site_url('liste-trajet-gestion-de-voiture'));
   }
   public function supprimer()
   {

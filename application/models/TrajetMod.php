@@ -8,6 +8,13 @@ class TrajetMod extends CI_Model
         $query = $this->db->query('select * from view_trajet');
         return $query->result_array();
     }
+    public  function getTrajetVehicule($idVoiture)
+    {
+        $this->db->where(array('id_voiture' => $idVoiture));
+        $query = $this->db->get('view_trajet');
+        print_r($this->db->last_query());
+        return $query->result_array();
+    }
 
     public  function insert($data)
     {

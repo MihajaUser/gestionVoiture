@@ -23,9 +23,11 @@ class ControllerUsers extends CI_Controller
     {
         $this->pageLogin();
     }
+    public function  deconnexion(){
+        $this->pageLogin();
+    }
     public function vehicule()
     {
-      
         $user =  $this->UsersMod->checkUsers($this->input->post('email'), sha1($this->input->post('mdp')));
         if (count($user) == 0) {
             $data['errorLogin'] = 1;
@@ -33,7 +35,7 @@ class ControllerUsers extends CI_Controller
             $this->load->view('frontoffice/template', $data);
         } else {
             $this->load->model('VehiculeMod');
-            $data['vehicules'] = $this->VehiculeMod->getVehicule();
+            $data['vehicules'] = $this->VehiculeMod->getVehicule("");
             $data['page'] = 'vehicule.php';
             $this->session->set_userdata('user', $user);
             $this->load->view('backoffice/template', $data);

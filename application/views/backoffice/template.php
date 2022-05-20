@@ -120,7 +120,7 @@
 	</div>
 	<div class="left-side-bar">
 		<div class="brand-logo">
-			<a href="<?php echo base_url() ?>/assets/index.html">
+			<a href="#"> 	
 				<h1 style="color: white">
 					<?php
 					echo ($user[0]['statut']);
@@ -139,7 +139,7 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Users</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="<?php echo base_url() ?>/deconnexion-rechauffement-climatique">Deconnexion</a></li>
+							<li><a href="<?php echo base_url() ?>deconnexion-gestion-de-voiture">Deconnexion</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -150,7 +150,9 @@
 							<?php if ($user[0]['statut'] == "admin") { ?>
 								<li><a href="<?php echo site_url() ?>/page-ajout-voiture-gestion-de-voiture">ajout</a></li>
 							<?php		} ?>
-							<li><a href="<?php echo site_url() ?>/liste-voiture-gestion-de-voiture">liste</a></li>
+							<li><a href="<?php echo site_url() ?>/liste-voiture-gestion-de-voiture">Papiers</a></li>
+							<li><a href="<?php echo site_url() ?>vehicule-disponible-voiture-gestion-de-voiture">Disponible</a></li>
+							<li><a href="<?php echo site_url() ?>maintenance-vehicule-voiture-gestion-de-voiture">Maintenance</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
