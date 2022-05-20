@@ -148,8 +148,9 @@
 						</a>
 						<ul class="submenu">
 							<?php if ($user[0]['statut'] == "admin") { ?>
-								<li><a href="<?php echo site_url() ?>/page-ajout-voiture-gestion-de-voiture">ajout</a></li>
+								<li><a href="<?php echo site_url() ?>/page-ajout-voiture-gestion-de-voiture">Ajout</a></li>
 							<?php		} ?>
+							<li><a href="<?php echo site_url() ?>autre-liste-voiture-gestion-de-voiture">Liste</a></li>
 							<li><a href="<?php echo site_url() ?>/liste-voiture-gestion-de-voiture">Papiers</a></li>
 							<li><a href="<?php echo site_url() ?>vehicule-disponible-voiture-gestion-de-voiture">Disponible</a></li>
 							<li><a href="<?php echo site_url() ?>maintenance-vehicule-voiture-gestion-de-voiture">Maintenance</a></li>
@@ -160,7 +161,7 @@
 							<span class="micon dw dw-edit2"></span><span class="mtext">Trajets</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="<?php echo site_url() ?>/page-ajout-trajet-gestion-de-voiture">ajout</a></li>
+							<li><a href="<?php echo site_url() ?>page-ajout-trajet-sans-erreur-gestion-de-voiture">ajout</a></li>
 							<li><a href="<?php echo site_url() ?>/liste-trajet-gestion-de-voiture">liste</a></li>
 						</ul>
 					</li>

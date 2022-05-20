@@ -19,7 +19,7 @@ class VehiculeMod extends CI_Model
             $this->db->where('id', $id);
         }
         $query = $this->db->get('view_vehicule_papiers');
-        print_r($this->db->last_query());
+      //  print_r($this->db->last_query());
         return $query->result_array();
     }
 

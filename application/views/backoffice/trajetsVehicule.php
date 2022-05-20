@@ -1,4 +1,5 @@
 <h2 class="h4 pd-20">Trajet Vehicule</h2>
+<?php if (count($trajets) !== 0) { ?>
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -25,11 +26,14 @@
         <td><?= $trajet['nom_chauffeur'] ?></td>
       <?php    } ?>
       <td>
-        <form action="<?php echo site_url('') ?>page-pdf-trajets-vehicule-voiture-gestion-de-voiture" method="post">
-          <input type="hidden" name="idTrajet" value="<?php echo $trajet['id_trajet'] ?>">
+        <form action="<?php echo site_url('') ?>faire-pdf-trajets-vehicule-voiture-gestion-de-voiture" method="post">
+          <input type="hidden" name="id_voiture" value="<?php echo $trajet['id_voiture'] ?>">
           <input type="submit" class="btn btn-danger" value="PDF">
         </form>
       </td>
       </tr>
   </tbody>
 </table>
+<?php   } else{?>
+  <h2 class="h4 pd-20"> Ce vehicule n'as pas de trajets </h2>
+  <?php } ?>

@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+require FCPATH . '/vendor/autoload.php';
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -104,9 +105,18 @@ class ControllerVehicule extends CI_Controller
     {
         echo ("controllerUse to pdf");
         $live_mpdf = new \Mpdf\Mpdf();
-        $data['trajets'] = $this->TrajetMod->getTrajetVehicule($this->input->post('idVehicule'));
-        $all_html = $this->load->view('html_to_pdf', $data, true);
+        $this->load->model('TrajetMod');
+        $data['trajets'] = $this->TrajetMod->getTrajetVehicule($this->input->post('id_voiture'));
+        $all_html = $this->load->view('backoffice/trajetVehiculePdf', $data, true);
         $live_mpdf->WriteHTML($all_html);
         $live_mpdf->Output();
     }
+    
+    public function autreListe(){
+        $data['vehicules'] = $this->VehiculeMod->getVehicule("");
+        $data['page'] = 'listeVehicule.php';
+        $this->load->view('backoffice/template', $data);
+    }
+
+    
 }

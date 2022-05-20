@@ -18,7 +18,11 @@ class TrajetMod extends CI_Model
 
     public  function insert($data)
     {
+        var_dump($data);
+        echo("fais inserttrajet");
         $this->db->insert("trajets", $data);
+        print_r($this->db->error());
+        print_r($this->db->last_query());
     }
     public function supprimer($id)
     {

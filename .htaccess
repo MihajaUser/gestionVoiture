@@ -7,7 +7,7 @@ RewriteRule ^pageSignUp-gestion-de-voiture$  ControllerUsers/pageSignUp [L]
 RewriteRule ^signUp-gestion-de-voiture$  ControllerUsers/signUp [L]
 RewriteRule ^deconnexion-gestion-de-voiture$  ControllerUsers/deconnexion [L]
 
-RewriteRule ^liste-voiture-gestion-de-voiture$ ControllerVehicule/liste [L]
+RewriteRule ^liste-voiture-gestion-de-voiture$ ControllerVehicule/liste [L] 
 RewriteRule ^page-ajout-voiture-gestion-de-voiture$ ControllerVehicule/pageAjout [L]
 RewriteRule ^ajout-voiture-gestion-de-voiture$ ControllerVehicule/ajout [L]
 RewriteRule ^supprimer-voiture-gestion-de-voiture$ ControllerVehicule/supprimer [L]
@@ -18,6 +18,8 @@ RewriteRule ^maintenance-vehicule-voiture-gestion-de-voiture$ ControllerVehicule
 RewriteRule ^page-ajout-maintenance-vehicule-voiture-gestion-de-voiture$ ControllerVehicule/pageAjoutMaintenance [L] 
 RewriteRule ^ajout-maintenance-voiture-gestion-de-voiture$ ControllerVehicule/ajoutMaintenance [L]
 RewriteRule ^page-pdf-trajets-vehicule-voiture-gestion-de-voiture$ ControllerVehicule/pagePdf [L] 
+RewriteRule ^faire-pdf-trajets-vehicule-voiture-gestion-de-voiture$ ControllerVehicule/toPdf [L]
+RewriteRule ^autre-liste-voiture-gestion-de-voiture$ ControllerVehicule/autreListe [L]
 
 
 RewriteRule ^page-ajout-assurance-voiture-gestion-de-voiture$ ControllersAssurance/pageAjout [L]
@@ -34,7 +36,7 @@ RewriteRule ^liste-trajet-gestion-de-voiture$ ControllerTrajet/liste [L]
 RewriteRule ^page-ajout-trajet-gestion-de-voiture$ ControllerTrajet/pageAjout [L]
 RewriteRule ^ajout-trajet-gestion-de-voiture$ ControllerTrajet/ajout [L]
 RewriteRule ^supprimer-trajet-gestion-de-voiture$ ControllerTrajet/supprimer [L]
-
+RewriteRule ^page-ajout-trajet-sans-erreur-gestion-de-voiture$ ControllerTrajet/pageAjoutSansErreur [L]
 
 
 

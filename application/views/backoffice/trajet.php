@@ -23,14 +23,14 @@
 				<td><?= $trajet['date_arrivee'] . "<br>  " . $trajet['heure_arrivee'] ?></td>
 				<td><?= $trajet['numero'] ?></td>
 				<td><?= $trajet['nom_chauffeur'] ?></td>
-				<?php if ($user[0]['statut'] == "admin") { ?>
+				<?php if ($user[0]['statut'] == "admin") { /* ?>
 					<td>
 						<form action="<?php echo site_url('') ?>supprimer-trajet-gestion-de-voiture" method="post">
 							<input type="hidden" name="idTrajet" value="<?php echo $trajet['id_trajet'] ?>">
 							<input type="submit" class="btn btn-danger" value="supprimer">
 						</form>
 					</td>
-				<?php		} ?>
+				<?php		*/ } ?>
 			</tr>
 		<?php } ?>
 	</tbody>
